@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Puzzledos</string>
+    <string name="bienvenidos_a_nuestro_puzzle">BIENVENIDOS A NUESTRO PUZZLE</string>
+    <string name="equipo_puzzledos">EQUIPO PUZZLEDOS</string>
+    <string name="iniciar">INICIAR</string>
+    <string name="configuracion">CONFIGURACIÓN</string>
+    <string name="puntuaci_n">PUNTUACIÓN</string>
+    <string name="salir">SALIR</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="juego">Juego</string>
+    <string name="galeria">Galeria</string>
+    <string name="GALERIA">GALERIA</string>
+    <string name="puntuacion">Puntuacion</string>
+    <string name="ayuda">ayuda</string>
+    <string name="fondo">imagenFondo</string>
+    <string name="ABOUTUS">ACERCA DE</string>
+    <string name="shuffle">Mezcla</string>
+    <string name="reset">Reinicia</string>
+    <string name="or">o</string>
+    <string name="choose_image">Escoge imagen:</string>
+</resources>
