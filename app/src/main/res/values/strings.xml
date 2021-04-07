@@ -20,4 +20,6 @@
     <string name="choose_image">Escoge imagen:</string>
     <string name="caution">caution</string>
     <string name="caution2">caution</string>
+    <string name="textview">TextView</string>
+    <string name="end">end</string>
 </resources>
