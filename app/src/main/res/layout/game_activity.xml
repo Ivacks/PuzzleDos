@@ -47,21 +47,24 @@
             android:id="@+id/shuffle"
             android:layout_width="100dp"
             android:layout_height="60dp"
-            android:text="@string/shuffle" />
+            android:background="#f3f170 "
+            android:text="@string/mezcla" />
 
         <android.widget.Button
             android:id="@+id/end"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="@string/end" />
+            android:background="#93acf6"
+            android:text="@string/fin" />
 
         <android.widget.Button
-            android:id="@+id/reset"
+            android:id="@+id/solucion"
             android:layout_width="100dp"
             android:layout_height="60dp"
+            android:background="#f3f170 "
             android:onClick="finishGame"
-            android:text="@string/reset" />
+            android:text="@string/solucion" />
 
     </LinearLayout>
 </FrameLayout>

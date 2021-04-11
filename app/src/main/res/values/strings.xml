@@ -22,4 +22,11 @@
     <string name="caution2">caution</string>
     <string name="textview">TextView</string>
     <string name="end">end</string>
+    <string name="solution">solution</string>
+    <string name="mezcla">mezcla</string>
+    <string name="fin">fin</string>
+    <string name="solucion">solucion</string>
+    <string name="como_jugar">como jugar</string>
+    <string name="c_mo_jugar">Cómo jugar</string>
+    <string name="howtoplay">CÓMO JUGAR</string>
 </resources>

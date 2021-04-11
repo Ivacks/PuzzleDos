@@ -44,7 +44,7 @@ class GameActivity : AppCompatActivity() {
             board.shuffle()
         }
 
-        findViewById<Button>(R.id.reset).setOnClickListener {
+        findViewById<Button>(R.id.solucion).setOnClickListener {
             board.shuffle(true)
         }
 
@@ -72,7 +72,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun startTimeCounter() {
         val countTime: TextView = findViewById(R.id.temporizador)
-        object : CountDownTimer(50000, 1000) {
+        object : CountDownTimer(1000000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
 
                 countTime.text = counter.toString()
