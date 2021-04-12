@@ -28,7 +28,7 @@ class GameActivity : AppCompatActivity() {
         ViewModelProviders.of(this).get(BoardOptionsViewModel::class.java)
     }
 
-    private fun mountBoard() {
+    fun mountBoard() {
         val board = findViewById<GameBoard>(R.id.boardView)
 
         viewModel.boardSize.observe(this, Observer {
