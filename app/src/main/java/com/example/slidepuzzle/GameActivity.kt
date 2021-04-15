@@ -3,14 +3,20 @@ package com.example.slidepuzzle
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.graphics.Bitmap
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.support.v7.app.AppCompatActivity
 import android.util.Size
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import com.example.slidepuzzle.ui.boardoptions.BoardOptionsViewModel
 import com.example.slidepuzzle.ui.boardoptions.BoardTitledSize
 import com.example.slidepuzzle.ui.game.GameBoard
+import kotlinx.android.synthetic.main.game_activity.*
+import kotlinx.android.synthetic.main.titled_image_card_fragment.*
 
 data class BoardActivityParams(val bitmap: Bitmap, val size: BoardTitledSize)
 
@@ -18,12 +24,13 @@ class GameActivity : AppCompatActivity() {
     companion object {
         lateinit var initialConfig: BoardActivityParams
     }
+    var counter = 0
 
     private val viewModel: BoardOptionsViewModel by lazy {
         ViewModelProviders.of(this).get(BoardOptionsViewModel::class.java)
     }
 
-    private fun mountBoard() {
+    fun mountBoard() {
         val board = findViewById<GameBoard>(R.id.boardView)
 
         viewModel.boardSize.observe(this, Observer {
@@ -39,8 +46,13 @@ class GameActivity : AppCompatActivity() {
             board.shuffle()
         }
 
-        findViewById<Button>(R.id.reset).setOnClickListener {
+        findViewById<Button>(R.id.solucion).setOnClickListener {
             board.shuffle(true)
+        }
+
+        findViewById<Button>(R.id.end).setOnClickListener {
+            Toast.makeText(this, "has tardado " + counter + " segundos", Toast.LENGTH_SHORT).show()
+            Score.scorePoints = " " + Score.scorePoints + "Puntuacion : " + counter + "\n"
         }
     }
 
@@ -48,6 +60,7 @@ class GameActivity : AppCompatActivity() {
         viewModel.apply {
             boardSize.value = initialConfig.size
             boardImage.value = initialConfig.bitmap
+
         }
 
         super.onCreate(savedInstanceState)
@@ -57,6 +70,21 @@ class GameActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         mountBoard()
+        startTimeCounter()
+    }
+
+    private fun startTimeCounter() {
+        val countTime: TextView = findViewById(R.id.temporizador)
+        object : CountDownTimer(1000000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+
+                countTime.text = counter.toString()
+                counter++
+            }
+            override fun onFinish() {
+                countTime.text = "Game Over"
+            }
+        }.start()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -68,4 +96,9 @@ class GameActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-}
+
+      fun finishGame (view:View){
+        counter = 0
+    }
+
+    }
