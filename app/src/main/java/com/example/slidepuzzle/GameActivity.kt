@@ -15,6 +15,8 @@ import android.widget.Toast
 import com.example.slidepuzzle.ui.boardoptions.BoardOptionsViewModel
 import com.example.slidepuzzle.ui.boardoptions.BoardTitledSize
 import com.example.slidepuzzle.ui.game.GameBoard
+import kotlinx.android.synthetic.main.game_activity.*
+import kotlinx.android.synthetic.main.titled_image_card_fragment.*
 
 data class BoardActivityParams(val bitmap: Bitmap, val size: BoardTitledSize)
 
@@ -50,6 +52,7 @@ class GameActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.end).setOnClickListener {
             Toast.makeText(this, "has tardado " + counter + " segundos", Toast.LENGTH_SHORT).show()
+            Score.scorePoints = " " + Score.scorePoints + "Puntuacion : " + counter + "\n"
         }
     }
 
