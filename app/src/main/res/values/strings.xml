@@ -29,4 +29,5 @@
     <string name="como_jugar">como jugar</string>
     <string name="c_mo_jugar">Cómo jugar</string>
     <string name="howtoplay">CÓMO JUGAR</string>
+    <string name="puntuacion_0">Puntuacion = 0</string>
 </resources>
