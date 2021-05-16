@@ -10,6 +10,8 @@ import android.widget.ImageView
 import com.example.slidepuzzle.ui.boardoptions.BoardTitledSize
 
 
+
+
 class Gallery : AppCompatActivity() {
     lateinit var imageView: ImageView
     lateinit var button: Button
@@ -18,6 +20,7 @@ class Gallery : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.galeria)
+
         title = "KotlinApp"
         imageView = findViewById(R.id.imageView)
         button = findViewById(R.id.buttonLoadPicture)

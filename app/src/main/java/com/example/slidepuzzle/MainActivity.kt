@@ -53,6 +53,14 @@ class MainActivity : AppCompatActivity() {
         }
         //endregion
 
+        //region hacer foto
+        var buttonHacerFoto = findViewById<Button>(R.id.ButtonHacerFoto)
+        buttonHacerFoto.setOnClickListener {
+            val intent = Intent(this, HacerFoto::class.java)
+            startActivity(intent)
+        }
+        //endregion
+
         //region ExitButton
         var buttonExit = findViewById<Button>(R.id.btnExit)
         buttonExit.setOnClickListener {
