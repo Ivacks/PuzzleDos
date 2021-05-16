@@ -5,9 +5,14 @@ import android.content.Intent
 //import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.media.MediaPlayer
+import android.view.View
 
 
 class MainActivity : AppCompatActivity() {
+    var mMediaPlayer: MediaPlayer? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -68,6 +73,43 @@ class MainActivity : AppCompatActivity() {
         }
         //endregion
 
+        //endregion
+
+
+        }
+
+    //region Sound
+
+    // 1. Plays the Background sound
+    fun playSound(view: View) {
+        if (mMediaPlayer == null) {
+            mMediaPlayer = MediaPlayer.create(this, R.raw.gokuforever)
+            mMediaPlayer!!.isLooping = true
+            mMediaPlayer!!.start()
+        } else mMediaPlayer!!.start()
+    }
+
+    // 2. Pause playback
+    fun pauseSound(view: View) {
+        if (mMediaPlayer != null && mMediaPlayer!!.isPlaying) mMediaPlayer!!.pause()
+    }
+
+    // 3. {optional} Stops playback
+    fun stopSound(view: View) {
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.stop()
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
+
+    // 4. Closes the MediaPlayer when the app is closed
+    override fun onStop() {
+        super.onStop()
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
         //endregion
 
 
