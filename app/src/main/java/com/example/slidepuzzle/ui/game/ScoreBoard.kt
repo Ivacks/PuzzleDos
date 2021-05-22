@@ -3,13 +3,13 @@ package com.example.slidepuzzle.ui.game
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.util.Size
 import android.view.View
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import com.example.slidepuzzle.R
 import com.example.slidepuzzle.ui.boardoptions.BoardOptionsViewModel
 import com.example.slidepuzzle.ui.game.state.PuzzleGrid
