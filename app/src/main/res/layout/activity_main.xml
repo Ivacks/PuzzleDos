@@ -155,7 +155,7 @@
         android:background="#00FFFFFF"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="casual"
-        android:text="TOMAR FOTO"
+        android:text="@string/tomar_foto"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#020101"
         android:textIsSelectable="false"

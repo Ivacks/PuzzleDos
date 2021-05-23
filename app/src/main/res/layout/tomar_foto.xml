@@ -10,7 +10,7 @@
 
     <Button
         android:id="@+id/cameraBtn"
-        android:text="hacer foto"
+        android:text="@string/tomar_foto"
         android:textSize="16sp"
         android:textColor="@color/white"
         android:padding="15dp"
