@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Email"
+            android:hint="@string/correo"
             android:inputType="textEmailAddress" />
 
         <Space
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Contraseña"
+            android:hint="@string/contra"
             android:inputType="textPassword" />
 
         <Space
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/black"
-                android:text="Registrar"
+                android:text="@string/registrar"
                 android:textColor="@color/white" />
 
             <Space
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/holo_blue_dark"
-                android:text="Acceder"
+                android:text="@string/acceder"
                 android:textColor="@color/white" />
         </LinearLayout>
 
