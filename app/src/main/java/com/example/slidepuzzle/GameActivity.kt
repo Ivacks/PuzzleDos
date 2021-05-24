@@ -1,21 +1,24 @@
 package com.example.slidepuzzle
 
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.appcompat.app.AppCompatActivity
 import android.util.Size
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.example.slidepuzzle.ui.boardoptions.BoardOptionsViewModel
 import com.example.slidepuzzle.ui.boardoptions.BoardTitledSize
 import com.example.slidepuzzle.ui.game.GameBoard
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 data class BoardActivityParams(val bitmap: Bitmap, val size: BoardTitledSize)
 
@@ -51,7 +54,19 @@ class GameActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.end).setOnClickListener {
             Toast.makeText(this, "has tardado " + counter + " segundos", Toast.LENGTH_SHORT).show()
-            Score.scorePoints = " " + Score.scorePoints + "Puntuacion : " + counter + "\n"
+            //Score.scorePoints = " " + Score.scorePoints + "Puntuacion : " + counter + "\n"
+
+           val database = Firebase.database("https://puzzledos-default-rtdb.europe-west1.firebasedatabase.app/")
+            val user = Firebase.auth.currentUser;
+
+
+            if (user != null) {
+                val myRef = database.getReference(user.uid)
+
+                myRef.setValue(counter)
+            }
+
+
 
             val intent = Intent(this, Gallery::class.java)
             startActivity(intent)
