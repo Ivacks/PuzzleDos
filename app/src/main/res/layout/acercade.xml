@@ -47,7 +47,7 @@
         android:layout_height="372dp"
         android:fadingEdge="none"
         android:fontFamily="casual"
-        android:text="@string/instrucciones"
+        android:text="Realizar el puzzle en el menor tiempo posible\n\nPulsar el botón finalizar una vez completado el puzzle\n\nBotón mezcla para mezclar de nuevo\n\nBotón solución para mostrar el puzzle completado"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"

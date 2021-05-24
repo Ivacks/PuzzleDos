@@ -25,16 +25,9 @@
     <string name="solution">solution</string>
     <string name="mezcla">mezcla</string>
     <string name="fin">fin</string>
-    <string name="solucion">solución</string>
+    <string name="solucion">solucion</string>
     <string name="como_jugar">como jugar</string>
     <string name="c_mo_jugar">Cómo jugar</string>
     <string name="howtoplay">CÓMO JUGAR</string>
     <string name="puntuacion_0">Puntuacion = 0</string>
-    <string name="instrucciones">Realizar el puzzle en el menor tiempo posible. Pulsar el botón finalizar una vez completado el puzzle. Botón mezcla para mezclar de nuevo. Botón solución para mostrar el puzzle completado</string>
-    <string name="correo">Correo</string>
-    <string name="contra">Contraseña</string>
-    <string name="registrar">Registrar</string>
-    <string name="acceder">Acceder</string>
-    <string name="tomar_foto">TOMAR FOTO</string>
-    <string name="cargar_imagen">Cargar imagen</string>
 </resources>
