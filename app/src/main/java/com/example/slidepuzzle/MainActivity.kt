@@ -1,12 +1,12 @@
 package com.example.slidepuzzle
 
-import androidx.appcompat.app.AppCompatActivity
-import android.content.Intent
 //import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
+import android.content.Intent
 import android.media.MediaPlayer
+import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,13 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
         //endregion
 
-        //region GalleryButton
-        var buttonGallery = findViewById<Button>(R.id.ButtonGallery)
-        buttonGallery.setOnClickListener {
-            val intent = Intent(this, Gallery::class.java)
-            startActivity(intent)
-        }
-        //endregion
+
 
         //region ConfigurationButton
         var buttonConfiguration = findViewById<Button>(R.id.ButtonConfiguration)
@@ -58,13 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
         //endregion
 
-        //region hacer foto
-        var buttonHacerFoto = findViewById<Button>(R.id.ButtonHacerFoto)
-        buttonHacerFoto.setOnClickListener {
-            val intent = Intent(this, HacerFoto::class.java)
-            startActivity(intent)
-        }
-        //endregion
+
 
         //region ExitButton
         var buttonExit = findViewById<Button>(R.id.btnExit)
