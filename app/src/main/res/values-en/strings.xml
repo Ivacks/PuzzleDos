@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Puzzledos</string>
+    <string name="bienvenidos_a_nuestro_puzzle">WELCOME TO OUR PUZZLE</string>
+    <string name="equipo_puzzledos">PUZZLEDOS TEAM</string>
+    <string name="iniciar">START</string>
+    <string name="configuracion">CONFIGURATION</string>
+    <string name="puntuaci_n">SCORE</string>
+    <string name="salir">EXIT</string>
+    <string name="acerca_de">About</string>
+    <string name="juego">Game</string>
+    <string name="galeria">Gallery</string>
+    <string name="GALERIA">GALLERY</string>
+    <string name="puntuacion">Score</string>
+    <string name="ayuda">help</string>
+    <string name="fondo">imagenFondo</string>
+    <string name="ABOUTUS">ABOUT</string>
+    <string name="shuffle">Mix</string>
+    <string name="reset">Restart</string>
+    <string name="or">or</string>
+    <string name="choose_image">Choose image:</string>
+    <string name="caution">caution</string>
+    <string name="caution2">caution</string>
+    <string name="textview">TextView</string>
+    <string name="end">end</string>
+    <string name="solution">solution</string>
+    <string name="mezcla">mix</string>
+    <string name="fin">end</string>
+    <string name="solucion">solution</string>
+    <string name="como_jugar">How to play</string>
+    <string name="c_mo_jugar">How to play</string>
+    <string name="howtoplay">HOW TO PLAY</string>
+    <string name="puntuacion_0">Puntuation = 0</string>
+    <string name="instrucciones">Solve the puzzle in the shortest time possible. Press the finish button once the puzzle is complete. Mix button to mix again. Solution button to display the completed puzzle</string>
+    <string name="correo">Email</string>
+    <string name="contra">Password</string>
+    <string name="registrar">Sign In</string>
+    <string name="acceder">Log In</string>
+    <string name="tomar_foto">TAKE PHOTO</string>
+    <string name="cargar_imagen">Load image</string>
+</resources>
