@@ -68,8 +68,7 @@ class GameActivity : AppCompatActivity() {
 
 
 
-            val intent = Intent(this, Gallery::class.java)
-            startActivity(intent)
+
         }
     }
 
