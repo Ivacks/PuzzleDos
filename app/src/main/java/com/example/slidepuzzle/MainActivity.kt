@@ -1,12 +1,12 @@
 package com.example.slidepuzzle
 
-import androidx.appcompat.app.AppCompatActivity
-import android.content.Intent
 //import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
+import android.content.Intent
 import android.media.MediaPlayer
+import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         //region GalleryButton
         var buttonGallery = findViewById<Button>(R.id.ButtonGallery)
         buttonGallery.setOnClickListener {
-            val intent = Intent(this, Gallery::class.java)
+            val intent = Intent(this, FirebaseUIActivity::class.java)
             startActivity(intent)
         }
         //endregion
@@ -111,6 +111,8 @@ class MainActivity : AppCompatActivity() {
             mMediaPlayer = null
         }
         //endregion
+
+
 
 
     }

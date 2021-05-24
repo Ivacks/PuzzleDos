@@ -1,8 +1,8 @@
 package com.example.slidepuzzle.ui.boardoptions
 
+import android.graphics.Bitmap
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.graphics.Bitmap
 import com.example.slidepuzzle.R
 import java.io.Serializable
 
@@ -26,6 +26,7 @@ class BoardOptionsViewModel : ViewModel() {
         )
 
         val PREDEFINED_IMAGES: Array<TitledResourcePair> = arrayOf(
+
             TitledResourcePair(R.drawable.cat, "kotek"),
             TitledResourcePair(R.drawable.doge, "piesek"),
             TitledResourcePair(R.drawable.spiderman, "spajdemen"),

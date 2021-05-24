@@ -8,6 +8,7 @@ import android.util.Size
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.Gallery
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +17,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.slidepuzzle.ui.boardoptions.BoardOptionsViewModel
 import com.example.slidepuzzle.ui.boardoptions.BoardTitledSize
 import com.example.slidepuzzle.ui.game.GameBoard
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -56,8 +58,9 @@ class GameActivity : AppCompatActivity() {
             Score.scorePoints = " " + Score.scorePoints + "Puntuacion : " + counter + "\n"
 
             val database = Firebase.database("https://puzzledos-default-rtdb.europe-west1.firebasedatabase.app/")
-            val myRef = database.getReference("score")
-
+            val myRef = database.getReference(Firebase.auth.currentUser.toString())
+            var ref = Firebase.("https://puzzledos-default-rtdb.europe-west1.firebasedatabase.app/");
+            var authData = ref.getAuth();
             myRef.setValue(counter)
 
             val intent = Intent(this, Gallery::class.java)
