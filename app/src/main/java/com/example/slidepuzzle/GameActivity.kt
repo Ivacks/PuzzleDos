@@ -54,7 +54,7 @@ class GameActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.end).setOnClickListener {
             Toast.makeText(this, "has tardado " + counter + " segundos", Toast.LENGTH_SHORT).show()
-            Score.scorePoints = " " + Score.scorePoints + "Puntuacion : " + counter + "\n"
+            //Score.scorePoints = " " + Score.scorePoints + "Puntuacion : " + counter + "\n"
 
            val database = Firebase.database("https://puzzledos-default-rtdb.europe-west1.firebasedatabase.app/")
             val user = Firebase.auth.currentUser;
